@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100b25">
+  <meta name="description" content="A little digital bouquet and a letter made with love for Sherly Margaretha.">
+  <title>For Sherly ♡ | From Naufal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="night-sky" aria-hidden="true">
+    <div class="moon"></div>
+    <div class="stars" id="stars"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+  </div>
+
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="For Sherly">little things ♡</a>
+      
+<div class="music-player" id="musicPlayer">
+  <div class="music-cover">
+    <span>♡</span>
+  </div>
+
+  <div class="music-info">
+    <span class="music-eyebrow">NOW PLAYING</span>
+    <span class="music-title">A song for you</span>
+    <span class="music-artist">For Sherly ♡</span>
+
+    <div class="music-progress">
+      <span id="musicProgress"></span>
+    </div>
+  </div>
+
+  <button class="music-button" id="musicButton"
+    type="button" aria-label="Play music" aria-pressed="false">
+    <span id="musicIcon">▶</span>
+  </button>
+</div>
+
+    </header>
+
+    <section class="intro" id="intro">
+      <p class="eyebrow">A LITTLE SOMETHING GIFT</p>
+      <h1>For you, <span>Sherly.</span></h1>
+      <p class="intro-text">
+        Ada sesuatu kecil yang ingin aku kasih ke kamu.
+        Jangan lupa suratnya di pencet yaaa ♡
+      </p>
+
+      <button class="envelope-button" id="openButton" type="button"
+        aria-label="Buka amplop surat">
+        <span class="envelope-halo"></span>
+        <span class="envelope" id="envelope">
+          <span class="letter-peek">
+            <span>To. Sherly ♡</span>
+          </span>
+          <span class="envelope-back"></span>
+          <span class="envelope-flap"></span>
+          <span class="envelope-front"></span>
+          <span class="envelope-seal">♡</span>
+        </span>
+      </button>
+
+      <p class="open-hint" id="openHint">
+        <span class="hint-dot"></span>
+        Tap the envelope to open your letter
+      </p>
+    </section>
+
+    <section class="surprise" id="surprise" hidden>
+      <p class="eyebrow reveal-item">MADE WITH LOVE, JUST FOR YOU</p>
+      <h2 class="surprise-title reveal-item">
+        A digital bouquet <span>for my favorite person.</span>
+      </h2>
+      <p class="bouquet-subtitle reveal-item">
+        Kalau bunga bisa bicara, mungkin akan berbeda lagi hehehe.
+      </p>
+
+      <!-- FOTO POLAROID -->
+
+<!-- TIGA FOTO POLAROID -->
+<div class="polaroid-gallery reveal-item">
+  <div class="polaroid polaroid-left">
+    <div class="polaroid-tape"></div>
+    <img
+      src="images/foto-1.jpeg"
+      alt="Kenangan pertama"
+      class="polaroid-photo"
+    />
+    <div class="polaroid-caption">A little memory ♡</div>
+  </div>
+
+  <div class="polaroid polaroid-center">
+    <div class="polaroid-tape"></div>
+    <img
+      src="images/foto-2.jpeg"
+      alt="Kenangan kedua"
+      class="polaroid-photo"
+    />
+    <div class="polaroid-caption">My favorite person</div>
+  </div>
+
+  <div class="polaroid polaroid-right">
+    <div class="polaroid-tape"></div>
+    <img
+      src="images/foto-3.jpeg"
+      alt="Kenangan ketiga"
+      class="polaroid-photo"
+    />
+    <div class="polaroid-caption">Us, always ♡</div>
+  </div>
+
+  <span class="polaroid-star polaroid-star-one">✧</span>
+  <span class="polaroid-star polaroid-star-two">♡</span>
+</div>
+
+      <div class="bouquet-stage" id="bouquetStage">
+        <div class="floating-hearts" aria-hidden="true">
+          <span>♡</span><span>♥</span><span>♡</span>
+          <span>✦</span><span>♡</span><span>♥</span>
+        </div>
+
+        <svg class="bouquet" viewBox="0 0 360 380"
+          role="img" aria-label="Buket mawar merah, tulip merah muda, dan bunga putih">
+          <defs>
+            <linearGradient id="wrapGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f7c5dc"/>
+              <stop offset="48%" stop-color="#cf8dbd"/>
+              <stop offset="100%" stop-color="#90629e"/>
+            </linearGradient>
+            <linearGradient id="roseGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ff9bb9"/>
+              <stop offset="50%" stop-color="#ed477b"/>
+              <stop offset="100%" stop-color="#9f174e"/>
+            </linearGradient>
+            <linearGradient id="tulipGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ffd1e6"/>
+              <stop offset="100%" stop-color="#f05b9b"/>
+            </linearGradient>
+            <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#9cdbad"/>
+              <stop offset="100%" stop-color="#347b67"/>
+            </linearGradient>
+            <filter id="flowerGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- Stems -->
+          <g fill="none" stroke="#6da981" stroke-width="3"
+             stroke-linecap="round">
+            <path d="M177 206 Q175 260 180 315"/>
+            <path d="M130 185 Q151 245 176 314"/>
+            <path d="M220 190 Q202 252 184 315"/>
+            <path d="M91 157 Q131 238 173 312"/>
+            <path d="M267 159 Q226 242 187 313"/>
+            <path d="M147 130 Q158 228 178 312"/>
+            <path d="M244 131 Q216 223 187 312"/>
+          </g>
+
+          <!-- Leaves -->
+          <g fill="url(#leafGrad)">
+            <path d="M153 248 Q103 205 115 173 Q158 190 153 248Z"/>
+            <path d="M205 254 Q248 208 242 181 Q205 198 205 254Z"/>
+            <path d="M160 280 Q117 253 122 230 Q158 244 160 280Z"/>
+            <path d="M198 283 Q239 255 234 232 Q201 248 198 283Z"/>
+            <path d="M124 214 Q83 185 84 163 Q121 177 124 214Z"/>
+            <path d="M229 216 Q271 185 272 164 Q235 180 229 216Z"/>
+          </g>
+
+          <!-- Left rose -->
+          <g class="flower flower-rose" style="--delay:.15s">
+            <path d="M112 161 C84 159 77 134 93 117
+              C86 93 111 82 129 98 C147 77 171 96 165 117
+              C184 133 166 159 144 158Z" fill="url(#roseGrad)"/>
+            <path d="M102 126 Q95 108 114 104 Q124 92 139 109
+              Q159 108 155 129 Q146 148 126 145 Q105 148 102 126Z"
+              fill="#ffabc5"/>
+            <path d="M119 126 Q113 112 128 110 Q144 112 139 127
+              Q131 138 119 126Z" fill="#be245a"/>
+            <path d="M95 135 Q108 153 124 145" fill="none"
+              stroke="#ffccdc" stroke-width="2"/>
+          </g>
+
+          <!-- Upper tulip -->
+          <g class="flower flower-tulip" style="--delay:.3s">
+            <path d="M158 137 Q137 118 150 93
+              L161 109 Q169 82 178 93
+              Q195 77 202 104 Q218 120 195 140Z"
+              fill="url(#tulipGrad)"/>
+            <path d="M161 119 Q173 104 178 119
+              Q192 103 200 121 Q190 140 177 134Z"
+              fill="#ffb7d6"/>
+            <path d="M178 99 L178 128" stroke="#ffe8f2"
+              stroke-width="2" fill="none"/>
+          </g>
+
+          <!-- Right rose -->
+          <g class="flower flower-rose" style="--delay:.45s">
+            <path d="M223 163 C198 160 188 138 203 119
+              C197 98 220 85 237 101 C255 80 280 98 274 120
+              C292 138 273 162 252 160Z" fill="url(#roseGrad)"/>
+            <path d="M211 129 Q205 111 224 106 Q239 96 251 112
+              Q270 109 264 130 Q254 149 237 145 Q216 150 211 129Z"
+              fill="#ff9fbe"/>
+            <path d="M230 128 Q224 114 239 112 Q252 114 248 129
+              Q240 140 230 128Z" fill="#b51e54"/>
+          </g>
+
+          <!-- Side tulips -->
+          <g class="flower flower-tulip" style="--delay:.55s">
+            <path d="M75 173 Q62 153 75 133
+              L83 145 Q91 120 101 137
+              Q115 125 122 150 Q126 170 107 181Z"
+              fill="url(#tulipGrad)"/>
+            <path d="M244 137 Q233 116 246 99
+              L255 113 Q264 89 274 104
+              Q290 96 294 121 Q295 141 275 149Z"
+              fill="url(#tulipGrad)"/>
+          </g>
+
+          <!-- Small white flowers -->
+          <g class="flower flower-small" style="--delay:.65s"
+             fill="#fff2fa" filter="url(#flowerGlow)">
+            <g transform="translate(86 102)">
+              <circle cx="0" cy="-7" r="5"/>
+              <circle cx="7" cy="0" r="5"/>
+              <circle cx="0" cy="7" r="5"/>
+              <circle cx="-7" cy="0" r="5"/>
+              <circle r="4" fill="#ffd76d"/>
+            </g>
+            <g transform="translate(191 72)">
+              <circle cy="-7" r="5"/>
+              <circle cx="7" r="0" r="5"/>
+              <circle cy="7" r="5"/>
+              <circle cx="-7" r="0" r="5"/>
+              <circle r="4" fill="#ffd76d"/>
+            </g>
+            <g transform="translate(284 95)">
+              <circle cy="-7" r="5"/>
+              <circle cx="7" r="0" r="5"/>
+              <circle cy="7" r="5"/>
+              <circle cx="-7" r="0" r="5"/>
+              <circle r="4" fill="#ffd76d"/>
+            </g>
+            <g transform="translate(112 77) scale(.7)">
+              <circle cy="-7" r="5"/><circle cx="7" r="0" r="5"/>
+              <circle cy="7" r="5"/><circle cx="-7" r="0" r="5"/>
+              <circle r="4" fill="#ffd76d"/>
+            </g>
+            <g transform="translate(254 75) scale(.7)">
+              <circle cy="-7" r="5"/><circle cx="7" r="0" r="5"/>
+              <circle cy="7" r="5"/><circle cx="-7" r="0" r="5"/>
+              <circle r="4" fill="#ffd76d"/>
+            </g>
+          </g>
+
+          <!-- Bouquet wrapping -->
+          <path d="M80 177 Q180 211 280 177
+            L225 310 Q180 343 135 310Z"
+            fill="url(#wrapGrad)" stroke="#f5c5e1" stroke-width="1.5"/>
+          <path d="M180 211 L180 329 L135 310Z"
+            fill="#f9d5e8" opacity=".55"/>
+          <path d="M80 177 Q180 211 280 177 L269 203
+            Q180 232 91 203Z" fill="#ffe0ed" opacity=".8"/>
+          <path d="M116 208 Q180 235 244 208"
+            stroke="#fff0f7" stroke-width="2" fill="none" opacity=".8"/>
+
+          <!-- Ribbon -->
+          <path d="M160 279 Q135 254 122 278
+            Q112 299 158 303 L180 292Z"
+            fill="#a72b6d" stroke="#ffc0df" stroke-width="1.5"/>
+          <path d="M200 279 Q225 254 238 278
+            Q248 299 202 303 L180 292Z"
+            fill="#a72b6d" stroke="#ffc0df" stroke-width="1.5"/>
+          <path d="M166 292 L160 324 L180 313 L200 324 L194 292Z"
+            fill="#d74e91" stroke="#ffc0df" stroke-width="1.5"/>
+          <circle cx="180" cy="291" r="11" fill="#f6bad8"
+            stroke="#fff0f7" stroke-width="2"/>
+          <text x="180" y="296" text-anchor="middle"
+            font-size="13" fill="#9b285d">♡</text>
+        </svg>
+      </div>
+
+      <div class="letter-card reveal-item" id="letterCard">
+        <div class="card-decoration" aria-hidden="true">✧ ♡ ✧</div>
+        <p class="letter-to">To: Sherly Margaretha</p>
+        <h3>A little letter for you</h3>
+        <div class="letter-divider"><span>♡</span></div>
+        <p class="letter-message">
+          Terima kasih sudah hadir dan membuat hari-hariku lebih indah.
+          Aku harap kamu selalu bahagia. Aku sayang kamu. ♡
+        </p>
+        <p class="letter-sign">With love,</p>
+        <p class="letter-from">Naufal ♡</p>
+        <p class="letter-date" id="letterDate"></p>
+      </div>
+
+      <button class="replay-button" id="replayButton" type="button">
+        ↻ &nbsp; Lihat lagi dari awal
+      </button>
+      <p class="footer-note">A little reminder that you are loved. ♡</p>
+    </section>
+  </main>
+
+  <audio id="backgroundMusic" loop preload="none">
+    <source src="assets/lagu.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
